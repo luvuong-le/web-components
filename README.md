@@ -1,5 +1,7 @@
 # Web Components
 
+![Web Component Site](/src/images/webcomponents.gif)
+
 ## Information
 
 An example of using web components to create a website using custom components. Makes use of dependency injection (DI) from small custom helper library.
