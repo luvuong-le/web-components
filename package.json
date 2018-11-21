@@ -1,0 +1,17 @@
+{
+  "name": "webcomponents-site-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --out-dir build"
+  },
+  "keywords": [],
+  "author": "Lu-Vuong <lu-vuongle@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "parcel-bundler": "^1.10.3"
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/css/master.css" />
+    <title>Web Components</title>
+  </head>
+  <body>
+    <header>
+      <nav-bar id="nav">
+        <nav-brand slot="navbar-brand" to="/">Web Components</nav-brand>
+        <nav-mbars slot="navbar-mbars">
+          <ion-icon name="menu" class="icon"></ion-icon>
+        </nav-mbars>
+        <nav-list slot="navbar-nav">
+          <nav-item
+            to="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+          >
+            <span>Docs</span> <ion-icon name="link" class="icon"></ion-icon>
+          </nav-item>
+          <nav-item to="https://github.com/mdn/web-components-examples"
+            >Examples <ion-icon name="link" class="icon"></ion-icon
+          ></nav-item>
+          <nav-item to="https://github.com/webcomponents"
+            >Github <ion-icon name="logo-github" class="icon"></ion-icon
+          ></nav-item>
+        </nav-list>
+      </nav-bar>
+      <side-nav closed>
+        <side-navlist slot="navbar-nav">
+          <nav-item
+            to="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+            ><span>Docs</span>
+            <ion-icon name="link" class="icon"></ion-icon>
+          </nav-item>
+          <nav-item to="https://github.com/mdn/web-components-examples"
+            >Examples <ion-icon name="link" class="icon"></ion-icon>
+          </nav-item>
+          <nav-item to="https://github.com/webcomponents"
+            >Github <ion-icon name="logo-github" class="icon"></ion-icon>
+          </nav-item>
+        </side-navlist>
+      </side-nav>
+    </header>
+
+    <div class="container">
+      <h1 class="title title-top">Web Components</h1>
+      <p class="lead">Standardised Reusuable Components For The Web</p>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+        class="btn btn--material"
+        >Learn More <ion-icon name="arrow-forward" class="icon"></ion-icon
+      ></a>
+      <div class="cards">
+        <x-card>
+          <ion-icon name="git-compare" slot="card-img"></ion-icon>
+          <h4 slot="card-content">New Standard</h4>
+          <p slot="card-content" class="lead">
+            It's an awesome work in progress!
+          </p>
+          <p slot="card-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+            porro, sapiente quos unde soluta voluptatem molestias! Quo totam
+            eaque laudantium nulla doloremque, aspernatur magnam odit! Qui fuga
+            placeat corporis veritatis.
+          </p>
+        </x-card>
+        <x-card>
+          <ion-icon name="radio-button-on" slot="card-img"></ion-icon>
+          <h4 slot="card-content">Clean</h4>
+          <p slot="card-content" class="lead">
+            No framework for custom components
+          </p>
+          <p slot="card-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+            porro, sapiente quos unde soluta voluptatem molestias! Quo totam
+            eaque laudantium nulla doloremque, aspernatur magnam odit! Qui fuga
+            placeat corporis veritatis.
+          </p>
+        </x-card>
+        <x-card>
+          <ion-icon name="sync" slot="card-img"></ion-icon>
+          <h4 slot="card-content">Reusuable</h4>
+          <p slot="card-content" class="lead">Share it with other developers</p>
+          <p slot="card-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+            porro, sapiente quos unde soluta voluptatem molestias! Quo totam
+            eaque laudantium nulla doloremque, aspernatur magnam odit! Qui fuga
+            placeat corporis veritatis.
+          </p>
+        </x-card>
+      </div>
+
+      <hr />
+
+      <!-- Web Component with it's own shadowDOM that hides the controls -->
+      <!-- <video controls src="mov_bbb.mp4" id="slider"></video> -->
+
+      <h1 class="title">Why use Web Components?</h1>
+      <p class="lead">No need for a custom framework, built in</p>
+
+      <div class="cards">
+        <x-card>
+          <ion-icon name="browsers" slot="card-img"></ion-icon>
+          <h4 slot="card-content">Templates</h4>
+          <p slot="card-content" class="lead">Reusuable Content</p>
+          <p slot="card-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+            porro, sapiente quos unde soluta voluptatem molestias! Quo totam
+            eaque laudantium nulla doloremque, aspernatur magnam odit! Qui fuga
+            placeat corporis veritatis.
+          </p>
+        </x-card>
+        <x-card>
+          <ion-icon name="albums" slot="card-img"></ion-icon>
+          <h4 slot="card-content">Shadow DOM</h4>
+          <p slot="card-content" class="lead">Encapsulation</p>
+          <p slot="card-content">
+            Allows for encapsulation. You can think of shadow DOM as a scoped
+            subtree inside your element. Allows you to hide the implementation
+            of the custom element from other users The difference is that none
+            of the code inside a shadow DOM can affect anything outside it,
+            allowing for handy encapsulation.
+          </p>
+        </x-card>
+        <x-card>
+          <ion-icon name="code-working" slot="card-img"></ion-icon>
+          <h4 slot="card-content">Slots</h4>
+          <p slot="card-content" class="lead">Render User Content</p>
+          <p slot="card-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+            porro, sapiente quos unde soluta voluptatem molestias! Quo totam
+            eaque laudantium nulla doloremque, aspernatur magnam odit! Qui fuga
+            placeat corporis veritatis.
+          </p>
+        </x-card>
+      </div>
+    </div>
+
+    <script src="./src/js/app.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+  </body>
+</html>
